@@ -48,7 +48,7 @@ export function Header() {
     >
       <div
         className={cn(
-          "bg-blue-100 transition-all duration-300 ease-in-out",
+          "bg-secondary transition-all duration-300 ease-in-out",
           isScrolled ? "h-0 py-0 opacity-0 overflow-hidden" : "py-2 opacity-100"
         )}
       >
@@ -64,16 +64,16 @@ export function Header() {
         </div>
       </div>
       
-      <div className="border-b border-black/10 bg-white/80 backdrop-blur-lg">
+      <div className="border-b border-border bg-background/80 backdrop-blur-lg">
         <div className="container mx-auto flex h-20 max-w-5xl items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2 text-xl font-semibold font-headline text-slate-900">
+          <Link href="/" className="flex items-center gap-2 text-xl font-semibold font-headline text-foreground">
             <Stethoscope className="text-primary" />
             <span>SereneMind</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
             {navLinks.map(({ href, label }) => (
-              <Link href={href} key={label} className="text-slate-700 transition-colors hover:text-slate-950">
+              <Link href={href} key={label} className="text-muted-foreground transition-colors hover:text-foreground">
                 {label}
               </Link>
             ))}
@@ -87,7 +87,7 @@ export function Header() {
           </Button>
           
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-slate-900 hover:bg-slate-200">
+            <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-foreground hover:bg-accent">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               <span className="sr-only">Toggle menu</span>
             </Button>
@@ -97,7 +97,7 @@ export function Header() {
       
       <div
         className={cn(
-          "md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white/95 backdrop-blur-lg",
+          "md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-background/95 backdrop-blur-lg",
           isMenuOpen ? "max-h-96 border-b border-border/60" : "max-h-0"
         )}
       >
@@ -106,7 +106,7 @@ export function Header() {
             <Link
               href={href}
               key={label}
-              className="w-full rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-colors hover:bg-slate-200 hover:text-slate-950"
+              className="w-full rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
               onClick={handleLinkClick}
             >
               {label}
