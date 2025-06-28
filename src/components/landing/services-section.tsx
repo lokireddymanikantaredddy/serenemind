@@ -36,7 +36,7 @@ export function ServicesSection() {
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Card key={service.title} className="overflow-hidden border-border/60 bg-white/50 shadow-sm transition-shadow hover:shadow-md">
+            <Card key={service.title} className="overflow-hidden shadow-sm transition-shadow hover:shadow-md">
               <CardHeader className="p-0">
                 <Image
                   src={service.imageUrl}

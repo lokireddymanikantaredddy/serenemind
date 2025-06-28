@@ -81,7 +81,7 @@ export function ContactForm() {
   }, [state, toast, form]);
 
   return (
-    <Card className="border-border/60 bg-white/50 p-2 shadow-sm">
+    <Card className="p-2 shadow-sm">
       <CardContent className="p-6">
         <Form {...form}>
           <form action={formAction} className="space-y-6">
