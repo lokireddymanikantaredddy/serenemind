@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
-import { CountdownTimer } from "./countdown-timer";
 
 export function HeroSection() {
   return (
@@ -13,9 +12,6 @@ export function HeroSection() {
     >
       <div className="absolute inset-0 bg-black/60 z-0"></div>
       <div className="relative z-10 container mx-auto max-w-4xl px-4 text-center text-primary-foreground fade-in">
-        <div className="mb-8">
-          <CountdownTimer targetDate="2025-01-01T00:00:00" />
-        </div>
         <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           Professional Counseling for Healing and Growth
         </h1>
