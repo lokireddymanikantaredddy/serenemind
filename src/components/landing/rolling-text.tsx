@@ -23,7 +23,7 @@ export function RollingText() {
   return (
     <div className="flex flex-col sm:flex-row items-center justify-center gap-x-2 text-lg md:text-xl text-primary-foreground/90">
       <p className="shrink-0">I want to work with you for...</p>
-      <div className="flex items-center gap-2 font-semibold text-center sm:text-left">
+      <div className="flex items-center gap-2 font-semibold text-center sm:text-left text-accent">
         <HeartHandshake className="h-6 w-6 shrink-0" />
         <div className="relative h-8 w-full sm:w-auto sm:min-w-[420px] overflow-hidden">
           {phrases.map((phrase, i) => (
