@@ -11,7 +11,7 @@ export function AboutSection() {
             width={400}
             height={400}
             className="aspect-square w-full max-w-xs mx-auto rounded-full object-cover shadow-lg"
-            data-ai-hint="professional portrait woman"
+            data-ai-hint="businesswoman glasses"
           />
         </div>
         <div className="space-y-4 text-center md:col-span-2 md:text-left">
