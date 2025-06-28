@@ -1,13 +1,27 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { HeartHandshake } from "lucide-react";
+import {
+  HeartHandshake,
+  Compass,
+  Feather,
+  type Icon,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const phrases = [
-  "Greater Love in Your Relationships",
-  "Greater Purpose in Your Life's Direction",
-  "Greater Peace in Your Heart",
+const items: { phrase: string; icon: Icon }[] = [
+  {
+    phrase: "Greater Love in Your Relationships",
+    icon: HeartHandshake,
+  },
+  {
+    phrase: "Greater Purpose in Your Life's Direction",
+    icon: Compass,
+  },
+  {
+    phrase: "Greater Peace in Your Heart",
+    icon: Feather,
+  },
 ];
 
 export function RollingText() {
@@ -15,32 +29,35 @@ export function RollingText() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+      setIndex((prev) => (prev + 1) % items.length);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-sm sm:text-base md:text-lg text-primary-foreground/90">
-      <span className="shrink-0">I want to work with you for…</span>
-      <div className="flex items-center gap-2 font-semibold text-accent">
-        <HeartHandshake className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
-        <div className="relative h-7 sm:h-8 w-[280px] sm:w-[320px] overflow-hidden">
-          {phrases.map((phrase, i) => (
-            <span
-              key={phrase}
+    <div className="flex flex-col items-center justify-center text-center gap-y-3 text-base sm:text-lg md:text-xl text-primary-foreground/90">
+      <p className="text-center">I want to work with you for…</p>
+
+      {/* Rolling area */}
+      <div className="relative h-10 sm:h-12 w-full max-w-[360px] overflow-hidden">
+        {items.map((item, i) => {
+          const IconComponent = item.icon;
+          return (
+            <div
+              key={item.phrase}
               aria-hidden={i !== index}
               className={cn(
-                "absolute inset-0 flex items-center justify-center text-center transition-all duration-700 ease-in-out",
+                "absolute inset-0 flex items-center justify-center gap-2 transition-all duration-700 ease-in-out",
                 i === index
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
+                  : "opacity-0 translate-y-6"
               )}
             >
-              {phrase}
-            </span>
-          ))}
-        </div>
+              <IconComponent className="h-6 w-6 text-accent" />
+              <span className="font-semibold text-accent">{item.phrase}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
