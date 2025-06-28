@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -14,20 +14,7 @@ const navLinks = [
 ];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      setIsScrolled(offset > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,14 +30,11 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300"
+        "sticky top-0 z-50 w-full"
       )}
     >
       <div
-        className={cn(
-          "bg-secondary transition-all duration-300 ease-in-out",
-          isScrolled ? "h-0 py-0 opacity-0 overflow-hidden" : "py-2 opacity-100"
-        )}
+        className="bg-secondary py-2"
       >
         <div className="container mx-auto flex max-w-5xl items-center justify-between px-4 text-sm text-muted-foreground">
           <a href="tel:555-444-3333" className="flex items-center gap-2 transition-colors hover:text-foreground">
