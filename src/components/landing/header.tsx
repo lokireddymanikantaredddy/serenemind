@@ -49,11 +49,11 @@ export function Header() {
     >
       <div
         className={cn(
-          "bg-muted/30 transition-all duration-300 ease-in-out",
+          "bg-primary/20 transition-all duration-300 ease-in-out",
           isScrolled ? "h-0 py-0 opacity-0 overflow-hidden" : "py-2 opacity-100"
         )}
       >
-        <div className="container mx-auto flex max-w-5xl items-center justify-center gap-4 px-4 text-sm text-muted-foreground md:justify-end md:gap-6">
+        <div className="container mx-auto flex max-w-5xl items-center justify-between px-4 text-sm text-muted-foreground">
           <a href="tel:555-444-3333" className="flex items-center gap-2 transition-colors hover:text-foreground">
             <Phone size={16} />
             <span>(555) 444-3333</span>
