@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Feather, Phone, Mail, Sparkles, Menu, X } from "lucide-react";
+import { Stethoscope, Phone, Mail, Sparkles, Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -48,16 +48,16 @@ export function Header() {
     >
       <div
         className={cn(
-          "bg-primary/20 transition-all duration-300 ease-in-out",
+          "bg-blue-100 transition-all duration-300 ease-in-out",
           isScrolled ? "h-0 py-0 opacity-0 overflow-hidden" : "py-2 opacity-100"
         )}
       >
-        <div className="container mx-auto flex max-w-5xl items-center justify-between px-4 text-sm text-muted-foreground">
+        <div className="container mx-auto flex max-w-5xl items-center justify-start px-4 text-sm text-muted-foreground">
           <a href="tel:555-444-3333" className="flex items-center gap-2 transition-colors hover:text-foreground">
             <Phone size={16} />
             <span>(555) 444-3333</span>
           </a>
-          <a href="mailto:contact@serenemind.com" className="flex items-center gap-2 transition-colors hover:text-foreground">
+          <a href="mailto:contact@serenemind.com" className="ml-6 flex items-center gap-2 transition-colors hover:text-foreground">
             <Mail size={16} />
             <span className="hidden md:inline">contact@serenemind.com</span>
           </a>
@@ -67,7 +67,7 @@ export function Header() {
       <div className="border-b border-black/10 bg-white/80 backdrop-blur-lg">
         <div className="container mx-auto flex h-20 max-w-5xl items-center justify-between px-4">
           <Link href="/" className="flex items-center gap-2 text-xl font-semibold font-headline text-slate-900">
-            <Feather className="text-primary" />
+            <Stethoscope className="text-primary" />
             <span>SereneMind</span>
           </Link>
           
