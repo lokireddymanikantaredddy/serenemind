@@ -21,11 +21,11 @@ export function RollingText() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-y-3 text-base sm:text-lg md:text-xl text-primary-foreground/90">
-      <p className="text-center">I want to work with you for…</p>
-      <div className="flex items-center justify-center gap-2 font-semibold text-accent">
-        <HeartHandshake className="h-6 w-6 shrink-0" />
-        <div className="relative h-8 sm:h-10 w-[320px] overflow-hidden">
+    <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-sm sm:text-base md:text-lg text-primary-foreground/90">
+      <span className="shrink-0">I want to work with you for…</span>
+      <div className="flex items-center gap-2 font-semibold text-accent">
+        <HeartHandshake className="h-5 w-5 sm:h-6 sm:w-6 shrink-0" />
+        <div className="relative h-7 sm:h-8 w-[280px] sm:w-[320px] overflow-hidden">
           {phrases.map((phrase, i) => (
             <span
               key={phrase}
