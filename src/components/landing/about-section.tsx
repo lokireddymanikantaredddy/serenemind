@@ -12,6 +12,7 @@ import { StatsBar } from "./stats-bar";
 export function AboutSection() {
   return (
     <section id="about" className="w-full bg-secondary/50">
+      <StatsBar />
       <div className="py-20 md:py-32">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
@@ -143,7 +144,6 @@ export function AboutSection() {
           </div>
         </div>
       </div>
-      <StatsBar />
     </section>
   );
 }
