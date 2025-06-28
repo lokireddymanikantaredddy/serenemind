@@ -5,6 +5,7 @@ import { ServicesSection } from "@/components/landing/services-section";
 import { FaqSection } from "@/components/landing/faq-section";
 import { ContactSection } from "@/components/landing/contact-section";
 import { Footer } from "@/components/landing/footer";
+import { TimedPopup } from "@/components/landing/timed-popup";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+      <TimedPopup />
     </div>
   );
 }
