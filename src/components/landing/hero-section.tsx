@@ -11,17 +11,17 @@ export function HeroSection() {
       data-ai-hint="stairs sky clouds"
     >
       <div className="absolute inset-0 bg-black/60 z-0"></div>
-      <div className="relative z-10 container mx-auto max-w-4xl px-4 text-center text-foreground fade-in">
-        <p className="mb-4 text-lg font-medium tracking-wide text-foreground/80">
+      <div className="relative z-10 container mx-auto max-w-4xl px-4 text-center text-primary-foreground fade-in">
+        <p className="mb-4 text-lg font-medium tracking-wide text-primary-foreground/80">
           Compassionate Online Therapy
         </p>
         <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           Professional Counseling for Healing and Growth
         </h1>
-        <p className="mt-6 text-lg leading-8 md:text-xl max-w-3xl mx-auto text-foreground/90">
+        <p className="mt-6 text-lg leading-8 md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
           Begin your journey towards emotional well-being, deeper connections, and lasting inner peace.
         </p>
-        <div className="mt-8 text-sm text-foreground/70 flex items-center justify-center gap-x-4">
+        <div className="mt-8 text-sm text-primary-foreground/70 flex items-center justify-center gap-x-4">
           <span>Evidence-Based</span>
           <span className="text-primary/50">&bull;</span>
           <span>Client-Focused</span>
