@@ -22,12 +22,10 @@ export function HeroSection() {
         <div className="mt-8">
           <RollingText />
         </div>
-        <div className="mt-8 text-sm text-primary-foreground/70 flex items-center justify-center gap-x-4">
-          <span>Evidence-Based</span>
-          <span className="text-primary/50">&bull;</span>
-          <span>Client-Focused</span>
-          <span className="text-primary/50">&bull;</span>
-          <span>Confidential</span>
+        <div className="mt-8 text-sm text-primary-foreground/70">
+          <Link href="#about" className="underline transition-colors hover:text-white">
+            8+ years of experience
+          </Link>
         </div>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Button size="lg" asChild className="bg-slate-100 text-slate-900 hover:bg-slate-100/90 font-semibold shadow-lg">
