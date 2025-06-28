@@ -43,8 +43,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-white/10 backdrop-blur-lg" : ""
+        "sticky top-0 z-50 w-full transition-all duration-300"
       )}
     >
       <div
@@ -65,16 +64,16 @@ export function Header() {
         </div>
       </div>
       
-      <div className="border-b border-border/60">
+      <div className="border-b border-black/10 bg-white/80 backdrop-blur-lg">
         <div className="container mx-auto flex h-20 max-w-5xl items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2 text-xl font-semibold font-headline">
+          <Link href="/" className="flex items-center gap-2 text-xl font-semibold font-headline text-slate-900">
             <Feather className="text-primary" />
             <span>SereneMind</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
             {navLinks.map(({ href, label }) => (
-              <Link href={href} key={label} className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link href={href} key={label} className="text-slate-700 transition-colors hover:text-slate-950">
                 {label}
               </Link>
             ))}
@@ -88,7 +87,7 @@ export function Header() {
           </Button>
           
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={toggleMenu}>
+            <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-slate-900 hover:bg-slate-200">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               <span className="sr-only">Toggle menu</span>
             </Button>
@@ -98,7 +97,7 @@ export function Header() {
       
       <div
         className={cn(
-          "md:hidden overflow-hidden transition-all duration-300 ease-in-out",
+          "md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white/95 backdrop-blur-lg",
           isMenuOpen ? "max-h-96 border-b border-border/60" : "max-h-0"
         )}
       >
@@ -107,7 +106,7 @@ export function Header() {
             <Link
               href={href}
               key={label}
-              className="w-full rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              className="w-full rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-colors hover:bg-slate-200 hover:text-slate-950"
               onClick={handleLinkClick}
             >
               {label}
