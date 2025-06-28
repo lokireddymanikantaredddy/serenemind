@@ -7,7 +7,7 @@ export function HeroSection() {
     <section
       id="hero"
       className="relative w-full h-[80vh] min-h-[600px] md:h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: "url(https://placehold.co/1920x1080.png)" }}
+      style={{ backgroundImage: "url(https://www.ellieshumaker.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-b.79c9c9cd.jpg&w=1920&q=75)" }}
       data-ai-hint="stairs sky clouds"
     >
       <div className="absolute inset-0 bg-black/60 z-0"></div>
