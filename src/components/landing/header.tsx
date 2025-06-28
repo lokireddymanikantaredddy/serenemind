@@ -52,12 +52,12 @@ export function Header() {
           isScrolled ? "h-0 py-0 opacity-0 overflow-hidden" : "py-2 opacity-100"
         )}
       >
-        <div className="container mx-auto flex max-w-5xl items-center justify-start px-4 text-sm text-muted-foreground">
+        <div className="container mx-auto flex max-w-5xl items-center justify-between px-4 text-sm text-muted-foreground">
           <a href="tel:555-444-3333" className="flex items-center gap-2 transition-colors hover:text-foreground">
             <Phone size={16} />
             <span>(555) 444-3333</span>
           </a>
-          <a href="mailto:contact@serenemind.com" className="ml-6 flex items-center gap-2 transition-colors hover:text-foreground">
+          <a href="mailto:contact@serenemind.com" className="flex items-center gap-2 transition-colors hover:text-foreground">
             <Mail size={16} />
             <span className="hidden md:inline">contact@serenemind.com</span>
           </a>
