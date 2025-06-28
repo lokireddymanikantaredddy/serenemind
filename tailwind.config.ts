@@ -77,10 +77,19 @@ export default {
             height: '0',
           },
         },
+        'button-glow': {
+          '0%, 100%': {
+            boxShadow: '0 0 5px #fef08a, 0 0 10px #facc15, 0 0 15px #f59e0b',
+          },
+          '50%': {
+            boxShadow: '0 0 10px #fef08a, 0 0 20px #facc15, 0 0 30px #f59e0b',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'button-glow': 'button-glow 4s ease-in-out infinite',
       },
     },
   },

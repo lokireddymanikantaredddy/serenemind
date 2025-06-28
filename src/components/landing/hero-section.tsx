@@ -28,7 +28,7 @@ export function HeroSection() {
           </Link>
         </div>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Button size="lg" asChild className="bg-slate-100 text-slate-900 hover:bg-slate-100/90 font-semibold shadow-lg">
+          <Button size="lg" asChild className="bg-slate-100 text-slate-900 hover:bg-slate-100/90 font-semibold animate-button-glow">
             <Link href="#contact">
               <Sparkles className="mr-2 h-5 w-5 text-primary" />
               Start Healing Today
