@@ -9,19 +9,19 @@ const faqs = [
   {
     question: "Do you accept insurance?",
     answer:
-      "I am an out-of-network provider for most PPO insurance plans. I can provide you with a superbill (a detailed receipt) that you can submit to your insurance company for potential reimbursement. Please check with your provider about your out-of-network mental health benefits.",
+      "I do not accept insurance directly, but I can provide you with a superbill (a detailed receipt of services) for you to submit to your insurance company for potential out-of-network reimbursement.",
   },
   {
-    question: "Are sessions available online?",
+    question: "Are online sessions available?",
     answer:
-      "Yes, all sessions are conducted online via a secure and confidential video platform. This allows for flexibility and convenience, enabling you to attend sessions from the comfort of your own space.",
+      "Yes, all sessions are conducted virtually via a secure and confidential Zoom platform.",
   },
   {
-    question: "How long is a typical therapy session?",
+    question: "What is your cancellation policy?",
     answer:
-      "A standard therapy session is 50 minutes long. The initial consultation may be slightly longer to allow for a thorough understanding of your needs and goals.",
+      "A 24-hour notice is required for all cancellations. Sessions cancelled with less than 24 hours notice will be charged the full session fee.",
   },
-    {
+  {
     question: "How do I get started?",
     answer:
       "The first step is to book a free 15-minute consultation using the contact form below. This allows us to briefly discuss your needs and determine if we are a good fit to work together. There's no obligation to continue after the consultation.",
