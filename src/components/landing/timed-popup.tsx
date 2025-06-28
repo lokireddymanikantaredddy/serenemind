@@ -6,6 +6,9 @@ import Link from "next/link";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Stethoscope, Star } from "lucide-react";
@@ -41,14 +44,14 @@ export function TimedPopup() {
             className="rounded-full object-cover shadow-lg"
             data-ai-hint="businesswoman glasses"
           />
-          <div className="space-y-2">
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground">
+          <DialogHeader className="space-y-2 p-0">
+            <DialogTitle className="font-headline text-3xl font-bold tracking-tight text-foreground">
               Ready to Start Your Healing Journey?
-            </h2>
-            <p className="text-muted-foreground">
+            </DialogTitle>
+            <DialogDescription>
               Take the first step towards emotional well-being, deeper connections, and lasting inner peace. Reach out to discuss how compassionate counseling can support you.
-            </p>
-          </div>
+            </DialogDescription>
+          </DialogHeader>
           
           <div className="text-sm text-muted-foreground flex items-center justify-center gap-x-3">
             <div className="flex items-center gap-1">
