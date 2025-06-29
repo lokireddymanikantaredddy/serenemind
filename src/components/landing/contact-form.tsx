@@ -2,7 +2,7 @@
 
 import { useEffect, useActionState } from "react";
 import { useFormStatus } from "react-dom";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
@@ -81,8 +81,25 @@ export function ContactForm() {
         description: state.message,
         variant: "destructive",
       });
+      if (state.fieldErrors) {
+        Object.entries(state.fieldErrors).forEach(([field, message]) => {
+          form.setError(field as keyof ContactFormValues, { message });
+        });
+      }
     }
   }, [state, toast, form]);
+
+  // Check for success
+  if (state?.status === "success") {
+    return (
+      <div className="flex flex-col items-center justify-center py-8">
+        <div className="text-3xl mb-4">😊</div>
+        <div className="text-2xl font-bold text-center mb-2">
+          Thank you! Ellie will get back to you soon
+        </div>
+      </div>
+    );
+  }
 
   return (
     <Form {...form}>
@@ -167,28 +184,32 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
+        <Controller
           name="preferredMethod"
+          control={form.control}
           render={({ field }) => (
             <FormItem>
               <FormLabel>Preferred Contact Method</FormLabel>
-              <Select
-                onValueChange={field.onChange}
-                defaultValue={field.value}
-              >
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select preferred method" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="phone">Phone Call</SelectItem>
-                  <SelectItem value="video">Video Call</SelectItem>
-                  <SelectItem value="email">Email</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
+              <>
+                <Select
+                  onValueChange={field.onChange}
+                  value={field.value ?? ""}
+                  defaultValue={field.value ?? ""}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select preferred method" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="phone">Phone Call</SelectItem>
+                    <SelectItem value="video">Video Call</SelectItem>
+                    <SelectItem value="email">Email</SelectItem>
+                  </SelectContent>
+                </Select>
+                <input type="hidden" name="preferredMethod" value={field.value ?? ""} />
+                <FormMessage />
+              </>
             </FormItem>
           )}
         />

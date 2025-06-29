@@ -47,14 +47,14 @@ export function RollingText() {
               key={item.phrase}
               aria-hidden={i !== index}
               className={cn(
-                "absolute inset-0 flex items-center justify-center gap-2 transition-all duration-700 ease-in-out",
+                "absolute inset-0 flex flex-nowrap items-center justify-center gap-2 transition-all duration-700 ease-in-out",
                 i === index
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-6"
               )}
             >
               <IconComponent className="h-6 w-6 text-accent" />
-              <span className="font-semibold text-accent">{item.phrase}</span>
+              <span className="font-semibold text-accent whitespace-nowrap text-sm sm:text-base md:text-lg">{item.phrase}</span>
             </div>
           );
         })}

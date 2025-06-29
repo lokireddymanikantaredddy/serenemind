@@ -52,11 +52,11 @@ export function Header() {
         <div className="container mx-auto flex max-w-5xl items-center justify-between px-4 text-sm text-muted-foreground">
           <a href="tel:555-444-3333" className="flex items-center gap-2 transition-colors hover:text-foreground">
             <Phone size={16} />
-            <span>(555) 444-3333</span>
+            <span>(323) 555-0192</span>
           </a>
           <a href="mailto:contact@serenemind.com" className="flex items-center gap-2 transition-colors hover:text-foreground">
             <Mail size={16} />
-            <span className="hidden md:inline">contact@serenemind.com</span>
+            <span className="hidden md:inline">serena@blakepsychology.com</span>
           </a>
         </div>
       </div>
