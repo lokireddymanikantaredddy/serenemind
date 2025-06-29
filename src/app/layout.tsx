@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
+import { Stethoscope } from "lucide-react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,6 +18,9 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "SereneMind Psychology | Dr. Serena Blake",
   description: "Compassionate and professional online therapy for anxiety, stress, relationships, and trauma.",
+  icons: {
+    icon: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({
