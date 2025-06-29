@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import profile from "@/assets/profile.png";
 import {
   Card,
   CardContent,
@@ -18,7 +19,7 @@ export function AboutSection() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
             <div className="space-y-8 lg:col-span-1">
               <Image
-                src="https://placehold.co/400x400.png"
+                src={profile}
                 alt="Portrait of Dr. Serena Blake"
                 width={400}
                 height={400}
@@ -87,22 +88,22 @@ export function AboutSection() {
                 <h3 className="mb-4 font-headline text-2xl font-bold text-foreground">
                   Services &amp; Specialties
                 </h3>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap  gap-3">
                   <Badge
                     variant="outline"
-                    className="border-primary/50 bg-primary/10 px-4 py-2 text-base"
+                    className="border-primary/50 bg-primary/10 cursor-pointer hover:bg-primary/20 px-4 py-2 text-base"
                   >
                     Anxiety &amp; Stress Management
                   </Badge>
                   <Badge
                     variant="outline"
-                    className="border-primary/50 bg-primary/10 px-4 py-2 text-base"
+                    className="border-primary/50 bg-primary/10 cursor-pointer hover:bg-primary/20 px-4 py-2 text-base"
                   >
                     Relationship Counseling
                   </Badge>
                   <Badge
                     variant="outline"
-                    className="border-primary/50 bg-primary/10 px-4 py-2 text-base"
+                    className="border-primary/50 bg-primary/10 cursor-pointer hover:bg-primary/20 px-4 py-2 text-base"
                   >
                     Trauma Recovery
                   </Badge>
@@ -113,8 +114,8 @@ export function AboutSection() {
                 <h3 className="mb-4 font-headline text-2xl font-bold text-foreground">
                   Session Fees
                 </h3>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <Card className="bg-background">
+                <div className="grid grid-cols-1  gap-4 md:grid-cols-2">
+                  <Card className="bg-background cursor-pointer hover:bg-primary/10">
                     <CardContent className="flex items-center gap-4 p-4">
                       <User className="h-8 w-8 text-primary" />
                       <div>
@@ -127,8 +128,8 @@ export function AboutSection() {
                       </div>
                     </CardContent>
                   </Card>
-                  <Card className="bg-background">
-                    <CardContent className="flex items-center gap-4 p-4">
+                  <Card className="bg-background cursor-pointer hover:bg-primary/10">
+                    <CardContent className="flex items-center gap-4 p-4 ">
                       <Users className="h-8 w-8 text-primary" />
                       <div>
                         <p className="text-2xl font-bold text-foreground">

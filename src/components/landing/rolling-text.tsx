@@ -5,11 +5,11 @@ import {
   HeartHandshake,
   Compass,
   Feather,
-  type Icon,
+  type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const items: { phrase: string; icon: Icon }[] = [
+const items: { phrase: string; icon: LucideIcon }[] = [
   {
     phrase: "Greater Love in Your Relationships",
     icon: HeartHandshake,

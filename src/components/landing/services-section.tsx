@@ -2,24 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import image2 from "@/assets/image2.jpg";
+import image3 from "@/assets/image3.jpg";
+import image4 from "@/assets/image4.jpeg";
 
 const services = [
   {
     title: "Anxiety & Stress Management",
     description: "Learn effective coping mechanisms to manage anxiety and reduce stress in your daily life.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: image2,
     imageHint: "woman praying sunset"
   },
   {
     title: "Relationship Counseling",
     description: "Improve communication and build stronger, healthier connections with your partner or loved ones.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: image3,
     imageHint: "couple talking"
   },
   {
     title: "Trauma Recovery",
     description: "A safe and supportive space to process traumatic experiences and move towards healing.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: image4,
     imageHint: "hope sunrise"
   },
 ];
@@ -29,7 +32,7 @@ export function ServicesSection() {
     <section id="services" className="w-full bg-background py-20 md:py-32">
       <div className="container mx-auto max-w-5xl px-4">
         <div className="mb-12 text-left">
-          <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             How I Help
           </h2>
         </div>

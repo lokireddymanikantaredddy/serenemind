@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,17 @@ const navLinks = [
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50); // Hide contact bar after 50px scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,7 +37,6 @@ export function Header() {
     }
   };
 
-
   return (
     <header
       className={cn(
@@ -34,7 +44,10 @@ export function Header() {
       )}
     >
       <div
-        className="bg-secondary py-2"
+        className={cn(
+          "bg-secondary py-2 transition-all duration-300 ease-in-out overflow-hidden",
+          isScrolled ? "max-h-0 py-0 opacity-0" : "max-h-12 opacity-100"
+        )}
       >
         <div className="container mx-auto flex max-w-5xl items-center justify-between px-4 text-sm text-muted-foreground">
           <a href="tel:555-444-3333" className="flex items-center gap-2 transition-colors hover:text-foreground">
